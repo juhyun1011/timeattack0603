@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>coffee</title>
+</head>
+<body>
+<form action="/coffee/" method="post">
+    {% csrf_token %}
+
+    <select name="category" id="category">
+            <option value="0" selected>카테고리 선택</option>
+            <option value="01">콜드브루 커피</option>
+            <option value="02">프라푸치노</option>
+            <option value="03">브루드 커피</option>
+    </select>
+    <button type="submit">확인</button>
+</form>
+{% for coffee in current_coffees %}
+{{ current_coffees }}
+{% endfor %}
+</body>
+</html>
